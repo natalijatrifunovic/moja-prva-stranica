@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz - Grad Svetlosti</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #f0e4f7; /* Malo promenjena boja pozadine za nežniji izgled */
+            margin: 0; /* Uklonjena podrazumevana margina */
+            padding: 0; /* Uklonjen podrazumevani padding */
+            color: #333; /* Tamnija boja teksta za bolji kontrast */
+        }
+        .container {
+            max-width: 900px; /* Ograničava širinu glavnog sadržaja */
+            margin: 20px auto; /* Centriranje kontejnera sa marginom gore/dole */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d9538d; /* Prilagođena boja naslova */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #5a4a78; /* Tamnija ljubičasta za podnaslove */
+            border-bottom: 2px solid #f0e4f7;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.7; /* Povećan prored za bolju čitljivost */
+            text-align: justify; /* Opravdano poravnanje teksta */
+            margin-bottom: 15px; /* Dodata margina ispod paragrafa */
+        }
+        .grad-info img, .znamenitost img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 5px; /* Zaobljene ivice za slike */
+        }
+        table {
+            width: 100%; /* Tabela da zauzme celu širinu kontejnera */
+            margin: 20px 0; /* Margina gore i dole */
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px; /* Povećan padding u tabeli */
+            text-align: left;
+        }
+        th {
+            background-color: #e8dff5; /* Svetlija ljubičasta za zaglavlje tabele */
+            color: #5a4a78;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000; /* Crna pozadina dok se video ne učita */
+            margin: 20px auto;
+            border-radius: 5px; /* Zaobljene ivice i za video kontejner */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Razmak između slika */
+            justify-content: center; /* Centriranje slika ako ne popune ceo red */
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33.333% - 10px); /* Tri slike u redu sa razmakom */
+            height: auto;
+            object-fit: cover; /* Da slike lepo popune prostor bez distorzije */
+            aspect-ratio: 1 / 1; /* Kvadratni odnos stranica za uniformnost u galeriji */
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        /* Za manje ekrane, prilagođavanje galerije */
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px); /* Dve slike u redu */
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%; /* Jedna slika u redu */
+            }
+             p {
+                text-align: left; /* Na manjim ekranima levo poravnanje može biti čitljivije od justify */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dobrodošli u Pariz - Grad Svetlosti!</h1>
+
+        <div class="grad-info">
+            <h2>O Parizu</h2>
+            <p>
+                <a href="https://www.paris.fr/en" target="_blank">Pariz</a>, glavni i najveći grad Francuske, smešten je na obalama reke Sene u srcu regiona Il de Frans. Vekovima je bio jedan od najvažnijih i najatraktivnijih gradova na svetu. Poznat je kao "Grad Svetlosti" (La Ville Lumière), nadimak koji je dobio kako zbog svoje vodeće uloge u doba prosvetiteljstva, tako i zbog ranog usvajanja ulične rasvete.
+            </p>
+            <p>
+                Pariz je globalni centar umetnosti, mode, gastronomije i kulture. Njegova arhitektura iz 19. veka, široki bulevari i reka Sena čine ga jednim od najprepoznatljivijih gradskih pejzaža. Grad obiluje istorijskim spomenicima, svetski poznatim muzejima i živopisnim kvartovima koji privlače milione turista svake godine. Od romantičnih šetnji pored Sene, preko posete veličanstvenim palatama, do uživanja u francuskim specijalitetima u šarmantnim bistroima, Pariz nudi nezaboravno iskustvo za svakog posetioca.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/800px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg" alt="Ajfelov toranj u Parizu">
+        </div>
+
+        <h2>Najpoznatije znamenitosti</h2>
+
+        <div class="znamenitost">
+            <h3>Ajfelov toranj (Tour Eiffel)</h3>
+            <p>
+                Nezaobilazni simbol Pariza i jedna od najprepoznatljivijih građevina na svetu. Izgrađen za Svetsku izložbu 1889. godine, kao delo inženjera Gustava Ajfela, prvobitno je bio predmet kritika, da bi kasnije postao globalna ikona Francuske. Sa svojih 330 metara visine, nudi neverovatan panoramski pogled na ceo grad sa tri nivoa dostupna posetiocima.
+            </p>
+        </div>
+
+        <div class="znamenitost">
+            <h3>Muzej Luvr (Musée du Louvre)</h3>
+            <p>
+                Najveći i najposećeniji umetnički muzej na svetu, smešten u nekadašnjoj kraljevskoj palati. Dom je neprocenjivih remek-dela koja obuhvataju period od antike do sredine 19. veka, uključujući čuvenu Mona Lizu Leonarda da Vinčija, Veneru Milosku i Niku sa Samotrake. Staklena piramida na ulazu, dizajnirana od strane I. M. Peija, postala je moderni simbol muzeja.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Louvre_Museum_Wikimedia_Commons.jpg/1024px-Louvre_Museum_Wikimedia_Commons.jpg" alt="Muzej Luvr">
+        </div>
+
+        <div class="znamenitost">
+            <h3>Katedrala Notr Dam (Cathédrale Notre-Dame de Paris)</h3>
+            <p>
+                Remek-delo gotske arhitekture, katedrala Notr Dam (Naša Gospođa) vekovima je bila duhovno i kulturno srce Pariza. Posvećena Devici Mariji, njena gradnja započeta je u 12. veku. Čuvena je po svojim vitražima, skulpturama i zvonima. Iako je pretrpela značajna oštećenja u požaru 2019. godine, njena obnova je u toku i ostaje simbol nade, otpornosti i istorijskog nasleđa grada.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Notre_Dame_de_Paris_-_Vue_densemble.jpg/1024px-Notre_Dame_de_Paris_-_Vue_densemble.jpg" alt="Katedrala Notr Dam pre požara">
+
+        </div>
+
+        <div class="znamenitost">
+            <h3>Monmartr i Bazilika Sakre Ker (Montmartre et Basilique du Sacré-Cœur)</h3>
+            <p>
+                Monmartr je brdoviti kvart u severnom delu Pariza, poznat po svojoj bogatoj umetničkoj istoriji i boemskoj atmosferi. Nekada dom mnogih poznatih umetnika poput Pikasa i Van Goga, danas privlači posetioce svojim uskim ulicama, Trgom Tertr gde slikari i danas stvaraju, i prelepim pogledima na grad. Na vrhu brda dominira veličanstvena bazilika Sakre Ker (Sveto Srce), sagrađena od belog kamena u rimsko-vizantijskom stilu.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Montmartre_paris_france_sacre_coeur.JPG/1024px-Montmartre_paris_france_sacre_coeur.JPG" alt="Bazilika Sakre Ker na Monmartru">
+        </div>
+
+         <div class="znamenitost">
+            <h3>Trijumfalna kapija (Arc de Triomphe)</h3>
+            <p>
+                Još jedan od najpoznatijih simbola Pariza, Trijumfalna kapija se nalazi na zapadnom kraju Jelisejskih polja, na trgu Šarla de Gola (nekadašnji Trg Etoal - Zvezda). Naručio ju je Napoleon Bonaparta 1806. godine nakon pobede kod Austerlica, u čast francuske vojske. Ispod svoda kapije nalazi se Grob Neznanog junaka iz Prvog svetskog rata, sa večnim plamenom koji se svakodnevno obnavlja. Sa vrha kapije pruža se impresivan pogled na dvanaest avenija koje se zvezdasto šire od trga.
+            </p>
+        </div>
+
+        <h2>Galerija slika Pariza</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Arc_de_Triomphe_view_from_Arch.jpg/1024px-Arc_de_Triomphe_view_from_Arch.jpg" alt="Pogled sa Trijumfalne kapije">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Paris_July_2011-30.jpg/1024px-Paris_July_2011-30.jpg" alt="Reka Sena i mostovi">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Paris_Night.jpg/1024px-Paris_Night.jpg" alt="Pariz noću">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Jardin_des_Tuileries_Roue_de_Paris.jpg/1024px-Jardin_des_Tuileries_Roue_de_Paris.jpg" alt="Park Tiljeri i panoramski točak">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Musee_d%27Orsay_-_Paris_2010.jpg/1024px-Musee_d%27Orsay_-_Paris_2010.jpg" alt="Muzej Orsej">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pont_des_Arts_-_Paris.jpg/1024px-Pont_des_Arts_-_Paris.jpg" alt="Most umetnosti (Pont des Arts)">
+        </div>
+
+
+        <h2>Osnovne informacije o Parizu</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Karakteristika</th>
+                    <th>Informacija</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Država</td>
+                    <td>Francuska</td>
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    <td>Il de Frans (Île-de-France)</td>
+                </tr>
+                <tr>
+                    <td>Stanovništvo</td>
+                    <td>Oko 2.1 miliona (uže gradsko područje), preko 11 miliona (metropolitansko područje)</td>
+                </tr>
+                <tr>
+                    <td>Jezik</td>
+                    <td>Francuski</td>
+                </tr>
+                <tr>
+                    <td>Valuta</td>
+                    <td>Evro (€)</td>
+                </tr>
+                <tr>
+                    <td>Pozivni broj</td>
+                    <td>+33</td>
+                </tr>
+                 <tr>
+                    <td>Vremenska zona</td>
+                    <td>UTC+1 (CET), UTC+2 (CEST) leti</td>
+                </tr>
+                <tr>
+                    <td>Reka</td>
+                    <td>Sena</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Video o Parizu</h2>
+        <p>Pogledajte ovaj kinematografski video da biste doživeli delić atmosfere Pariza:</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dzkM4FvZduQ?si=gqhOmQJcJaASD_x7" title="YouTube video player - PARIZ 4K - Cinematic Travel Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <p style="text-align:center; margin-top:30px;">
+            Za više informacija, posetite <a href="https://en.parisinfo.com/" target="_blank">zvanični turistički sajt Pariza</a>.
+        </p>
+    </div>
+</body>
+</html>
